@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body class="body-edit" id="body-edit">
+        <div class="head" id="head-edit">
+            <header>
+                <nav class="nav-menu2" id="nav-menu2-edit">
+                    <div class="logo">
+                        <img id="logo" src="JA_Graphics_Logo.png">
+                    </div>
+                    <div class="nav">
+                        <span class="greetings_edit" id="greetings_edit">Welcome!</span>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="dashboard">
+            <div class="edit-content">
+                <div class="edit-box" id="add-educ"><a href="add-education.html"></a></a></div>
+                <div class="edit-box" id="add-org"><a href="add-organization.html"></a></div>
+                <div class="edit-box" id="add-work"><a href="add-work.html"></a></div>
+                <div class="edit-box" id="del-educ"><a href="del-education.html"></a></div>
+                <div class="edit-box" id="del-org"><a href="del-organization.html"></a></div>
+                <div class="edit-box" id="del-work"><a href="del-work.html"></a></div>
+                <div class="edit-box" id="edit-link-github"><a href="edit-github.html"></a></div>
+                <div class="edit-box" id="edit-link-twitter"><a href="edit-twitter.html"></a></div>
+                <div class="edit-box" id="edit-link-instagram"><a href="edit-instagram.html"></a></div>
+                <div class="edit-box" id="edit-about"><a href="edit-about.html"></a></div>
+                
+            </div>
+        </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+        <script  src="https://code.jquery.com/jquery-3.5.1.js"
+              integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+              crossorigin="anonymous"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCfhEIvg5aUeEbI74cuCJnd7NeCgJnOY0U",
+                authDomain: "ccapdev-resume-15370.firebaseapp.com",
+                databaseURL: "https://ccapdev-resume-15370.firebaseio.com",
+                projectId: "ccapdev-resume-15370",
+                storageBucket: "ccapdev-resume-15370.appspot.com",
+                messagingSenderId: "485792061660",
+                appId: "1:485792061660:web:586580c173404513ecfc19"
+            };
+            // Initialize Firebase
+            var defaultProject = firebase.initializeApp(firebaseConfig);
+            var db = firebase.firestore();
+
+            firebase.auth().onAuthStateChanged(function(user) {
+                if (user) {
+                    console.log("user logged in")
+                } else{
+                    window.location.replace("signin.html");
+                
+                }
+            });
+
+        </script>
+    </body>
+</html>

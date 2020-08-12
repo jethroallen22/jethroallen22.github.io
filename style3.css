@@ -1,0 +1,40 @@
+.background{
+    background-color: #89c8c4;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: 170px auto;
+}
+
+.nav{
+    margin-left: 800px;
+    padding-top: 40px;
+    color: white;
+}
+
+.logo{
+    grid-column: 1;
+    justify-content: center;
+}
+
+#logo{
+    height: 50px;
+    width: auto;
+    padding-left:40px;
+    margin: 20px;
+}
+
+.links{
+    margin: 20px;
+}
+
+#portrait{
+    height: 100%;
+    width: auto;
+    background-repeat: no-repeat;
+    padding-left: 650px;
+}

@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="head">
+            <header>
+                <nav class="nav-menu">
+                    <div class="nav-menu-toggle js-nav-menu-toggle">
+                        <span class="nav-menu-bars"></span>
+                    </div>
+                    <ul class="menu-list">
+                        <li class="menu-list-item" id="home"><a href="">HOME</a></li>
+                        <li class="menu-list-item" id="educations"><a href="#education">EDUCATIONS</a></li>
+                        <li class="menu-list-item" id="organizations"><a href="#organization">ORGANIZATIONS</a></li>
+                        <li class="menu-list-item" id="works"><a href="#work">WORKS</a></li>
+                        <li class="menu-list-item" id="others"><a href="#other">OTHERS</a></li>
+                    </ul>
+                </nav>
+                <nav class="nav-menu2" id="nav-menu2">
+                    <div class="logo">
+                        <img id="logo" src="JA_Graphics_Logo.png">
+                    </div>
+                    <div class="nav">
+                        <span class="links" id="Home"><a href="">Home</a></span>
+                        <span class="links" id="Educations"><a href="#education">Educations</a></span>
+                        <span class="links" id="Organizations"><a href="#organization">Organizations</a></span>
+                        <span class="links" id="Works"><a href="#work">Works</a></span>
+                        <span class="links" id="Others"><a href="#other">Others</a></span>
+                    </div>
+                </nav>
+                <div class="header-content">
+                    <div class="header-text">
+                        <span>Hello,</span>
+                        <br>
+                        <span id="greet">WELCOME</span>
+                        <br>
+                        <span>to my world!</span>
+                        <a href="#content-container">
+                            <div id="get-started" onclick="myFunction()">
+                            Get Started
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <img id="portrait" src="portrait2.png">
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="content-container" id="content-container">
+            <div class="about-portrait">
+                <img id="portrait2" src="portrait.png">
+            </div>
+            <div class="about-content" id="about-content">
+                <div class="directory">
+                    <div class="directory-list">
+                        <span class="direct-links" id="Educationss"><a href="#education">Educations</a></span>
+                        <span class="direct-links" id="Organizationss"><a href="#organization">Organizations</a></span>
+                        <span class="direct-links" id="Workss"><a href="#work">Works</a></span>
+                    </div>
+                </div>
+                <span id="name">JETHRO ALLEN ALEJANDRO</span>        
+                <span id="title">BS Information Technology</span>
+            </div>        
+        </div>
+        <div class="education-container" id="education">
+            <div class="educ-mainbar">
+                <div id="educ-title">
+                    <span id="educ-title-content">EDUCATION</span>
+                </div>
+                <div class="educ-main-content" id="educ-main-content">
+                </div>
+                <div class="educ-main-bottom-border-line"></div>
+            </div>
+            <div class="educ-sidebar">
+                <img src="educ-side.png">
+            </div>
+        </div>
+        <div class="organization-container" id="organization">
+            <div class="organization-sidebar">
+                <img src="org-side.png">
+            </div>
+            <div class="organization-mainbar">
+                <div id="org-title">
+                    <span id="org-title-content">ORGANIZATION</span>
+                </div>
+                <div class="org-main-content" id="org-main-content">
+                </div>
+                <div class="educ-main-bottom-border-line"></div>
+            </div>
+        </div>
+        <div class="works-container" id="work">
+            <div class="works-sidebar"></div>
+            <div class="works-mainbar">
+                <div class="works-title">
+                    <span id="org-title-content">WORKS</span>
+                </div>
+                <div class="works-content" id="works-main-content">
+                </div>
+            </div>
+            <div class="works-sidebar"></div>
+        </div>
+        <div class="other" id="other">
+            <div class="other-logo">
+                <a href=""><img id="other-logo" src="JA_Graphics_Logo.png"></a>
+            </div>
+            <div class="contact-list">
+                <div class="contacts">
+                    <span class="icons">
+                        <img id="icons" src="mail-icon.png">
+                    </span>
+                    <span>jethro_alejandro@dlsu.edu.ph</span>
+                </div>
+                <div class="contacts">
+                    <span class="icons">
+                        <img id="icons" src="nav-icon.png">
+                    </span>
+                    <span>Tondo, Manila City, Philippines</span>
+                </div>
+                <div class="contacts">
+                    <span class="icons">
+                        <img id="icons" src="phone-icon.png">
+                    </span>
+                    <span>09064525156</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer" id="footer">
+            <div class="copyright">
+                <span>© 2020 Jethro Allen Alejandro | All rights reserved.</span>
+            </div>
+        </div>
+        <!-- JAVASCRIPT -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+        <script  src="https://code.jquery.com/jquery-3.5.1.js"
+              integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+              crossorigin="anonymous"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

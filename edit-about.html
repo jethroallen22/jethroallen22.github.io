@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Edit About</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sign-in/">
+    <link href="assets/dist/css/bootstrap.css" rel="stylesheet">  
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center">
+      <form class="form-signin" id="form-edit-about">
+          <img class="mb-4" src="JA_Graphics_Logo2.png" alt="" width="72" height="72">
+          <h1 class="h3 mb-3 font-weight-normal">Edit About Information</h1>
+          <label for="inputAbout" class="sr-only">Name</label>
+          <textarea id="inputAbout" name="aboutInfo" class="form-control" placeholder="Input information here!" required autofocus rows="10"></textarea>
+          
+          <div class="checkbox mb-3"></div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+          <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+      </form>
+              
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+      <script src="edit-about.js"></script>
+
+  </body>
+</html>

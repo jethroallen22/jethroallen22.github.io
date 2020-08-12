@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body class="background">
+        <div class="navbar">
+            <div class="logo">
+                <img id="logo" src="JA_Graphics_Logo.png">
+            </div>
+            <div class="nav">
+                <span class="links" id="home"><a href="">Home</a></span>
+                <span class="links" id="Educations"><a href="">Educations</a></span>
+                <span class="links" id="Organizations"><a href="">Organizations</a></span>
+            </div>
+
+        </div>
+        <header>
+            <div class="logo-float-left">
+            <a href=""><img id="logo" src="JA_Graphics_Logo.png"></a></div>
+            <div class="nav-float-right">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </header>
+        <div>
+            <img id="portrait" src="portrait.png">
+        </div>
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCfhEIvg5aUeEbI74cuCJnd7NeCgJnOY0U",
+                authDomain: "ccapdev-resume-15370.firebaseapp.com",
+                databaseURL: "https://ccapdev-resume-15370.firebaseio.com",
+                projectId: "ccapdev-resume-15370",
+                storageBucket: "ccapdev-resume-15370.appspot.com",
+                messagingSenderId: "485792061660",
+                appId: "1:485792061660:web:586580c173404513ecfc19"
+            };
+            // Initialize Firebase
+            var defaultProject = firebase.initializeApp(firebaseConfig);
+            
+            var db = firebase.firestore();
+            
+            //Get organizations
+            db.collection("educations").get().then(function(snapshot){
+                snapshot.forEach(function(doc){
+                    console.log(doc.data());
+                })   
+            });
+            
+            //ADD DATA
+            var newOrganization = {
+                name: "",
+                position: "",
+                year_start: 2020,
+                year_end: 2020
+            }
+            /*
+            db.collection("organizations").add(newOrganization).then(function(doc){
+                console.log("Item added with the uid: " + doc.id);
+            })*/
+            
+            /* DELETING DATA
+            db.collection("organizations").doc("MMeGIbcFWRVCx8UqBdw9").delete().then(function(){
+                console.log("Item deleted");
+            }).catch(function(err){
+                console.log("Error in deleting item: " + err);
+            });*/
+            
+            var email = "jethro_alejandro@dlsu.edu.ph";
+            var password = "0124580153";
+          
+            firebase.auth().signInWithEmailAndPassword(email, password).then(function(user){
+              console.log("user signed in");
+            }).catch(function(err){
+                if(err.code = "auth/wrong-password"){
+                    alert("Wrong Password")
+                }else{
+                    alert(err.message);
+                }
+            });
+        </script>
+    </body>
+</html>
