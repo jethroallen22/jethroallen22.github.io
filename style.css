@@ -172,6 +172,10 @@ body{
     height: 100%;
 }
 
+#particles-js{
+ background-size: cover;
+}
+
 .header-text{
     padding-top: 250px;
     padding-left: 150px;
@@ -256,6 +260,7 @@ a{
 
 .links{
     margin: 20px;
+    cursor: pointer;
     
 }
 
@@ -285,6 +290,7 @@ a{
     grid-template-rows: 250px  115px 10px 360px ;
     padding-left: center;
 }
+
 
 .directory{
     grid-row: 1;

@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     </head>
     <body>
         <div class="head">
@@ -22,7 +23,7 @@
                         <img id="logo" src="JA_Graphics_Logo.png">
                     </div>
                     <div class="nav">
-                        <span class="links" id="Home"><a href="">Home</a></span>
+                        <span class="links" id="Home"><a href=""></a>Home</a></span>
                         <span class="links" id="Educations"><a href="#education">Educations</a></span>
                         <span class="links" id="Organizations"><a href="#organization">Organizations</a></span>
                         <span class="links" id="Works"><a href="#work">Works</a></span>
@@ -30,12 +31,12 @@
                     </div>
                 </nav>
                 <div class="header-content">
-                    <div class="header-text">
+                    <div data-aos="fade-right" class="header-text">
                         <span>Hello,</span>
                         <br>
                         <span id="greet">WELCOME</span>
                         <br>
-                        <span>to my world!</span>
+                        <span>to my life!</span>
                         <a href="#content-container">
                             <div id="get-started" onclick="myFunction()">
                             Get Started
@@ -49,19 +50,19 @@
             </header>
         </div>
         <div class="content-container" id="content-container">
-            <div class="about-portrait">
+            <div data-aos="fade-right" class="about-portrait">
                 <img id="portrait2" src="portrait.png">
             </div>
-            <div class="about-content" id="about-content">
+            <div data-aos="fade-left"class="about-content" id="about-content">
                 <div class="directory">
                     <div class="directory-list">
-                        <span class="direct-links" id="Educationss"><a href="#education">Educations</a></span>
-                        <span class="direct-links" id="Organizationss"><a href="#organization">Organizations</a></span>
-                        <span class="direct-links" id="Workss"><a href="#work">Works</a></span>
+                        <span data-aos="fade-left" class="direct-links" id="Educationss"><a href="#education">Educations</a></span>
+                        <span data-aos="fade-left" data-aos-delay="200" class="direct-links" id="Organizationss"><a href="#organization">Organizations</a></span>
+                        <span data-aos="fade-left" data-aos-delay="400" class="direct-links" id="Workss"><a href="#work">Works</a></span>
                     </div>
                 </div>
-                <span id="name">JETHRO ALLEN ALEJANDRO</span>        
-                <span id="title">BS Information Technology</span>
+                <span data-aos="fade-up" id="name">JETHRO ALLEN ALEJANDRO</span>        
+                <span data-aos="fade-up" id="title">BS Information Technology</span>
             </div>        
         </div>
         <div class="education-container" id="education">
@@ -69,7 +70,7 @@
                 <div id="educ-title">
                     <span id="educ-title-content">EDUCATION</span>
                 </div>
-                <div class="educ-main-content" id="educ-main-content">
+                <div data-aos="fade-right" class="educ-main-content" id="educ-main-content">
                 </div>
                 <div class="educ-main-bottom-border-line"></div>
             </div>
@@ -85,7 +86,7 @@
                 <div id="org-title">
                     <span id="org-title-content">ORGANIZATION</span>
                 </div>
-                <div class="org-main-content" id="org-main-content">
+                <div data-aos="fade-left" class="org-main-content" id="org-main-content">
                 </div>
                 <div class="educ-main-bottom-border-line"></div>
             </div>
@@ -96,7 +97,7 @@
                 <div class="works-title">
                     <span id="org-title-content">WORKS</span>
                 </div>
-                <div class="works-content" id="works-main-content">
+                <div data-aos="fade-up" class="works-content" id="works-main-content">
                 </div>
             </div>
             <div class="works-sidebar"></div>
@@ -141,5 +142,9 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
         <script src="index.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
     </body>
 </html>
